@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>World Happiness Index Heat Map</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script>
+    function hello(){
+        alert("Hello");
+    }
+</script>
+
+</head>
+
+<body>
+    <h1>World Happiness Index Heat Map</h1>
+
+    <div id="WHI_heatMap"></div>
+
+    <button onclick = "hello()">Terms</button>
+
+    <select id="selDataset">
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+      </select>
+
+
+      <script src="world_map.js"></script>
+      <script src="plots.js"></script>
+</body>
