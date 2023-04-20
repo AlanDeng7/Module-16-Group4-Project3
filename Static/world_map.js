@@ -83,6 +83,9 @@ function selYear() {
     let code = data.map(items => items.Code);
     let score = data.map(items => items["Happiness Score"]);
 
+    console.log(code);
+    console.log(score);
+
     var happinessScore = {};
 
     //get dictionary of code and happiness score
@@ -96,6 +99,7 @@ function selYear() {
 
 
 
+
 let code2015 = data2015.map(items => items.Code);
     // Data trace array
 let score2015 = data2015.map(items => items["Happiness Score"]);
@@ -105,5 +109,6 @@ var happinessScore2015 = {};
 for (var i = 0; i < data2015.length; i++) {
     happinessScore2015["\""+code2015[i]+ "\""] = score2015[i];
 }
+
 
     
