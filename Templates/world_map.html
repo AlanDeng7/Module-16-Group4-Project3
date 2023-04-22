@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <body>
-    <h1>World Happiness Index Heat Map</h1>
+    <h1>World Happiness Score Heat Map</h1>
 
     <div id="WHI_heatMap"></div>
 
@@ -8,7 +8,7 @@
 
     <script>
       function welcome() {
-        var customMessage = "This is a heat map showing the Happiness Score of each country";
+        var customMessage = "Select a year to generate a heat of the Happiness Score of each country";
         alert(customMessage);
       }
     </script>
@@ -35,7 +35,7 @@
 
 <html>
 <head>
-  <title>jVectorMap demo</title>
+  <title>World Happiness Score </title>
   <link rel="stylesheet" href="../Static/jquery-jvectormap-2.0.5.css" type="text/css" media="screen"/>
 
   <script src="../Static/jquery.js"></script>
@@ -44,39 +44,7 @@
 </head>
 
 <body>
-  <div id="world-map" style="width: 1200px; height: 600px"></div>
-  <script>
-
-    var ScoreData =selYear();
-
-    console.log(ScoreData)
-
-    var gdpData = {
-    "AF": 16.63,
-    "AL": 11.58,
-    "DZ": 158.97,
-    "ZA": 4.642,
-    "ZM": 5.129,
-    "ZW": 4.61,
-    "CA": 7.427
-    };
-
-    $(function(){
-  $('#world-map').vectorMap({
-    map: 'world_mill',
-    series: {
-      regions: [{
-        values: ScoreData,
-        scale: ['#C8EEFF', '#0071A4'],
-        normalizeFunction: 'polynomial'
-      }]
-    },
-    onRegionTipShow: function(e, el, code){
-      el.html(el.html()+' (Score: '+ScoreData[code]+')');
-    }
-  });
-});
-  </script>
+  <div id="world-map" style="width: 1600px; height: 750px"></div>
 </body>
 </html>
 

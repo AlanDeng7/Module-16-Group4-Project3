@@ -1,3 +1,6 @@
+
+console.log(data)
+
 //2015 data filter
 function filter2015(data){return data["Year"]==2015;}
 //2016 data filter
@@ -22,6 +25,12 @@ let data2019 = data.filter(filter2019);
 let data2020 = data.filter(filter2020);
 let data2021 = data.filter(filter2021);
 
+let country = data2015.map(items => items.Country).slice(0, 10);
+console.log(country);
+
+let country2 = data2015.map(items => items.Country).slice(-10);
+console.log(country2);
+
 //call function selYear when year is changed
 d3.selectAll("#selDataset").on("change", selYear);
 
@@ -34,33 +43,6 @@ function init() {
     name: 'Age 65+',
     type: 'bar'
   };
-  var trace2 = {
-    x: ['Switzerland', 'Iceland', 'Denmark', 'Norway', 'Canada', 'Finland', 'Netherlands', 'Sweden', 'New Zealand', 'Australia'],
-    y: [4635339, 171878, 2920956, 2742063, 19712742, 2831377, 9059636, 5001895, 2357478, 12614797],
-    name: 'Age 64-25',
-    type: 'bar'
-  };
-  var trace3 = {
-    x: ['Switzerland', 'Iceland', 'Denmark', 'Norway', 'Canada', 'Finland', 'Netherlands', 'Sweden', 'New Zealand', 'Australia'],
-    y: [935987, 47073, 731475, 670175, 4497382, 644502, 2104973, 1208871, 645902, 3148141],
-    name: 'Age 24-15',
-    type: 'bar'
-  };
-  var trace4 = {
-    x: ['Switzerland', 'Iceland', 'Denmark', 'Norway', 'Canada', 'Finland', 'Netherlands', 'Sweden', 'New Zealand', 'Australia'],
-    y: [810365, 44524, 666049, 626255, 3869501, 599061, 1940010, 1121155, 612762, 2947071],
-    name: 'Age 14-5',
-    type: 'bar'
-  };
-  var trace5 = {
-    x: ['Switzerland', 'Iceland', 'Denmark', 'Norway', 'Canada', 'Finland', 'Netherlands', 'Sweden', 'New Zealand', 'Australia'],
-    y: [420781, 22271, 294746, 307021, 1932121, 297265, 888134, 587770, 306741, 1555088],
-    name: 'Age < 5',
-    type: 'bar'
-  };
-  var data = [trace1, trace2,trace3,trace4,trace5];
-  var layout = {barmode: 'stack'};
-  Plotly.newPlot('age_bar_top', data, layout);
 
   //default bot 10 countries bar chart
   var trace6 = {
@@ -69,30 +51,7 @@ function init() {
     name: 'Age 65+',
     type: 'bar'
   };
-  var trace7 = {
-    x: ['Chad', 'Guinea', 'Ivory Coast', 'Burkina Faso', 'Afghanistan', 'Rwanda', 'Benin', 'Syria', 'Burundi', 'Togo'],
-    y: [4293635, 3726442, null, 6062647, 10233436, 4189908, 3728271, 7307323, 3522664, 2725736],
-    name: 'Age 64-25',
-    type: 'bar'
-  };
-  var trace8 = {
-    x: ['Chad', 'Guinea', 'Ivory Coast', 'Burkina Faso', 'Afghanistan', 'Rwanda', 'Benin', 'Syria', 'Burundi', 'Togo'],
-    y: [2722043, 2459930, null, 3641061, 7251576, 2312601, 2147927, 3212743, 1939875, 1434772],
-    name: 'Age 24-15',
-    type: 'bar'
-  };
-  var trace9 = {
-    x: ['Chad', 'Guinea', 'Ivory Coast', 'Burkina Faso', 'Afghanistan', 'Rwanda', 'Benin', 'Syria', 'Burundi', 'Togo'],
-    y: [4050810, 3122467, null, 5185122, 9708575, 3081106, 2882558, 5427679, 2968631, 1926210],
-    name: 'Age 14-5',
-    type: 'bar'
-  };
-  var trace10 = {
-    x: ['Chad', 'Guinea', 'Ivory Coast', 'Burkina Faso', 'Afghanistan', 'Rwanda', 'Benin', 'Syria', 'Burundi', 'Togo'],
-    y: [2786446, 1914776, null, 3341603, 5747862, 1712611, 1836009, 2463875, 2051917, 1171049],
-    name: 'Age < 5',
-    type: 'bar'
-  };
+  
   var data2 = [trace6, trace7,trace8,trace9,trace10];
   var layout = {barmode: 'stack'};
   Plotly.newPlot('age_bar_bot', data2, layout);
