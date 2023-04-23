@@ -75,10 +75,11 @@ function selYear() {
         series: {
             regions: [{
                 values: happinessScore,
-                scale: ['#a40000','#00a400'],
+                scale: ['#F50057','#40C4FF'],
                 normalizeFunction: 'polynomial',
             legend: {
-                    horizontal: true
+                    horizontal: true,
+                    title: "Happiness Score"
                   }
             }]
         },
