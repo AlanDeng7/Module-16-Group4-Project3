@@ -1,37 +1,45 @@
-// Sort the data by Greek search results descending
-let sortedByCountryMigratedTo = data.sort((a, b) => b["Migrating into the country(combined)"] - a["Migrating into the country(combined)"]);
+// import data from the destination.js and origin.js
 
-// Slice the first 10 objects for plotting
-slicedData = sortedByCountryMigratedTo.slice(0, 10);
+// select the plot divs using their IDs
+var plot1Div = document.getElementById('plot1');
+var plot2Div = document.getElementById('plot2');
 
-// Reverse the array to accommodate Plotly's defaults
-reversedData = slicedData.reverse();
+// create a function to update the plots when the year is changed
+function updatePlots(year) {
+    // filter the data by the selected year and by Type = 'Combined'
+    var filteredData = data.filter(d => d.Year == year);
+    var filteredData_1 = data.filter(d => d.Year == year);
 
-// Trace1 for the Greek Data
-let trace1 = {
-  x: reversedData.map(object => object["Migrating into the country(combined)"]),
-  y: reversedData.map(object => object.Country),
-  text: reversedData.map(object => object.Country),
-  name: "Migration",
-  type: "bar",
-  orientation: "h"
-};
+    // sort the data by Total
+    filteredData.sort((a, b) => b["Migrating into the country(combined)"] - a["Migrating into the country(combined)"]);
+    filteredData_1.sort((a, b) => b["Migrating from the country(combined)"] - a["Migrating from the country(combined)"]);
 
-// Data array
-// `data` has already been defined, so we must choose a new name here:
-let traceData = [trace1];
+    // create the first plot
+    var plot1Data = [{
+        x: filteredData.slice(0,10).map(items => `${items.Country} (Rank:${items["Happiness Rank"]})`),
+        y: filteredData.slice(0,10).map(d => d["Migrating into the country(combined)"]),
+        type: 'bar'
+    }];
+    Plotly.newPlot(plot1Div, plot1Data, {
+      title: `Top ten countries favoured for immigration in ${year}`
+  });
 
-// Apply a title to the layout
-let layout = {
-  title: "Top ten countries favoured for migration",
-  margin: {
-    l: 100,
-    r: 100,
-    t: 100,
-    b: 100
-  }
-};
+    // create the second plot
+    var plot2Data = [{
+        x: filteredData_1.slice(0,10).map(items => `${items.Country} (Rank:${items["Happiness Rank"]})`),
+        y: filteredData_1.slice(0,10).map(d => d["Migrating from the country(combined)"]),
+        type: 'bar'
+    }];
+    Plotly.newPlot(plot2Div, plot2Data, {
+      title: `Top ten countries favoured for emmigration in ${year}`
+    });
+}
 
-// Render the plot to the div tag with id "plot"
-// Note that we use `traceData` here, not `data`
-Plotly.newPlot("plot", traceData, layout);
+// call the updatePlots function when the year is changed
+document.getElementById('year').addEventListener('change', function() {
+    updatePlots(this.value);
+});
+
+// initialize the plots with the default year
+updatePlots(2015);
+
