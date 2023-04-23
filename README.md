@@ -5,7 +5,7 @@ Module-16-Project3
 Link to dashboard: 
 
 ## Project Description
-Module 16 is project #3 of the UofT Data Analysis bootcamp. We, as a group, got curious to know if the world happiness index rankings and score have any cause-effect relationship with the factors of population, spending on education as a percentage of GDP and the global migration movement. Therefore, we decided to take up this project and create a dashboard of the abovementioned factors. 
+Module 16 is project #3 of the UofT Data Analysis bootcamp. We, as a group, were curious to know if the world happiness index rankings and score have any cause-effect relationship with the factors of population, spending on education as a percentage of GDP and the global migration movement. Therefore, we decided to take up this project and create a dashboard of the abovementioned factors. 
 
 ## About
 We sourced the 'World Happiness Index' data from Kaggle for 2015-2021, migration data from the UN's website for 2015 and 2020 and Population Data (2015-2021) and Education Expenditure data (2015-2020) from Our World In Data.
@@ -30,4 +30,4 @@ Set
 
 ## Resources
 Stack Overflow, W3school <br /> 
-Special Mentions: Tom Sesber and Jordan Merritt
+Special Mentions: Tom Seeber and Jordan Merritt
