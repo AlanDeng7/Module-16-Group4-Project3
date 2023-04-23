@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>World Happiness Index and Immigration Dashboard</title>
+    <link rel="stylesheet" href="../Static/jquery-jvectormap-2.0.5.css" type="text/css" media="screen"/>
+    <script src="../Static/jquery.js"></script>
+    <script src="../Static/jquery-jvectormap-2.0.5.min.js"></script>
+    <script src="../Static/jquery-jvectormap-world-mill.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+</head>
+<body>
+    <h1>World Happiness Index and Immigration Dashboard</h1>
+    <button onclick="welcome()">Click to start</button>
+
+    <script>
+      function welcome() {
+        var customMessage = "Select a year and type of immigration to generate the dashboard";
+        alert(customMessage);
+      }
+    </script>
+
+    <label for="year">Select a year:</label>
+    <select id="year">
+        <option value="2010"></option>
+        <option value="2015">2015</option>
+        <option value="2020">2020</option>
+    </select>
+
+    <label for="dataType">Select a data type:</label>
+    <select id="dataType">
+        <option value="Combined">Combined</option>
+        <option value="Males">Males</option>
+        <option value="Females">Females</option>
+    </select>
+
+
+    <div id="plot3"></div>
+    <div id="plot1"></div>
+    <div id="plot2"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../static/data.js"></script>
+    <script src="../static/migration.js"></script>
+
+    <script>
+        // call the functions to create the additional visualizations
+        createHeatmap();
+        updatePlots();
+    </script>
+    
+</body>
+</html>
