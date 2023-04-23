@@ -63,7 +63,7 @@ function init() {
   };
   
   var data2 = [trace6];
-  var layout = {barmode: 'stack',hover: };
+  var layout = {barmode: 'stack'};
   Plotly.newPlot('age_bar_bot', data2, layout);
 }
 

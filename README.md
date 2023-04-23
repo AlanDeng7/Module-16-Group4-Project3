@@ -14,10 +14,10 @@ SQL, CSV, and js files were used to store the data <br />
 
 
 ## Contributing
-Karan Anand
-Alan Deng
-Isaac Rodriguez Ocampo
-Settareh Zandnia
+Karan Anand <br />
+Alan Deng <br />
+Isaac Rodriguez Ocampo <br />
+Set 
 
 
 ## Resources
