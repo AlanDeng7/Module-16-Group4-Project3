@@ -2,7 +2,7 @@
 Module-16-Project3
 
 ## Getting Started
-Link to dashboard: 
+Link to dashboard: https://alandeng7.github.io/Module-16-Group4-Project3/ 
 
 ## Project Description
 Module 16 is project #3 of the UofT Data Analysis bootcamp. We, as a group, were curious to know if the world happiness index rankings and score have any cause-effect relationship with the factors of population, spending on education as a percentage of GDP and the global migration movement. Therefore, we decided to take up this project and create a dashboard of the abovementioned factors. 
