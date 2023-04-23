@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Education Expenditure</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1>Countries With Highest and Lowest Education Expenditure(% of Country's GDP)</h1>
+
+    <select id="selDataset" onchange=selYear()>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+      </select>
+
+      <h2>Top 10 Countries With Highest Education Expenditure(% of Country's GDP)</h2>
+      <div id="age_bar_top"></div>
+
+      <h2>Bottom 10 Countries With Lowest Education Expenditure(% of Country's GDP)</h2>
+      <div id="age_bar_bot"></div>
+
+      <script src="../Static/data.js"></script>
+      <script src="../Static/education.js"></script>
+      
+
+</body>
