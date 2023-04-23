@@ -15,11 +15,11 @@ We housed the data using SQL and filtered the data with the columns we needed fo
 We then used JavaScript, CSS and HTML codes to prepare our dashboards.
 
 You can view the final dashboards above, which include the following:
-* 1. Heat Map - World Happiness Score
-* 2. Age Distribution Amongst Top 10 and Bottom 10 Happiest Scoring CountrieS
-* 3. Countries with the Highest and Lowest Government Spending on Education (% of Country's GDP) 
-* 4. Migration Movement Comparisons
-* 5. Migration Movement World Heat Map
+* Heat Map - World Happiness Score
+* Age Distribution Amongst Top 10 and Bottom 10 Happiest Scoring CountrieS
+* Countries with the Highest and Lowest Government Spending on Education (% of Country's GDP) 
+* Migration Movement Comparisons
+* Migration Movement World Heat Map
 
 ## Contributing
 Karan Anand <br />
