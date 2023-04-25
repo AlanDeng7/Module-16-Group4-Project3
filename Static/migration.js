@@ -37,7 +37,7 @@ function updatePlots(year, dataType) {
     }];
     console.log("Plot 1 data:", plot1Data);
     Plotly.newPlot(plot1Div, plot1Data, {
-        title: `<b>Top ten countries favoured for immigration in ${year} (${dataType})</b>`
+        title: `<b>Top ten countries favoured for immigration till ${year} (${dataType})</b>`
     });
 
     // select the appropriate column for the second plot based on the data type
@@ -68,7 +68,7 @@ function updatePlots(year, dataType) {
     }];
     console.log("Plot 2 data:", plot2Data);
     Plotly.newPlot(plot2Div, plot2Data, {
-        title: `<b>Top ten countries favoured for emigration in ${year} (${dataType})</b>`
+        title: `<b>Top ten countries favoured for emigration till ${year} (${dataType})</b>`
     });
 }
 // create a function to update the heatmap when the year and data type are changed
@@ -100,7 +100,7 @@ function createHeatmap(year, dataType) {
     console.log("Heatmap data:", heatmapData);
     // define the layout for the heatmap
     var heatmapLayout = {
-        title: `<b>Happiness Score vs ${dataType} immigration in ${year}</b>`,
+        title: `<b>Happiness Score vs ${dataType} immigration till ${year}</b>`,
         xaxis: {
             title: "Country"
         },
