@@ -7,13 +7,13 @@ function updatePlots(year, dataType) {
     // select the appropriate column based on the data type
     if (dataType === "Combined") {
         dataColumn = "Migrating into the country(combined)";
-        title = `<b>Migrating into the country(combined) in ${year}</b>`;
+        title = `<b>Migrating into the country(combined) till ${year}</b>`;
     } else if (dataType === "Males") {
         dataColumn = "Migrating into the country(males)";
-        title = `<b>Migrating into the country(males) in ${year}</b>`;
+        title = `<b>Migrating into the country(males) till ${year}</b>`;
     } else if (dataType === "Females") {
         dataColumn = "Migrating into the country(females)";
-        title = `<b>Migrating into the country(females) in ${year}</b>`;
+        title = `<b>Migrating into the country(females) till ${year}</b>`;
     }
 
     // filter the data by the selected year and data type
